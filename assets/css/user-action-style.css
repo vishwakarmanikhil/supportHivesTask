@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Signika&family=Lato&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background: rgb(0,32,63);
+background: linear-gradient(90deg, rgba(0,32,63,1) 31%, rgba(18,61,138,1) 64%, rgba(37,148,219,1) 100%) fixed;
+  font-family: 'Lato', sans-serif;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:black !important;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:black;
+}
+
+/*===========All Errors Styling =======*/
+
+  #inputEmail-error{
+    position: relative;
+    left: 15px;
+    font-size: 80%;
+    color: red;
+  }
+
+  #inputPassword-error{
+    position: relative;
+    left: 15px;
+    font-size: 80%;
+    color: red;
+  }
+
+  #inputConfirmPassword-error{
+    position: relative;
+    left: 15px;
+    font-size: 80%;
+    color: red;
+  }
+
+  #inputUsername-error{
+    position: relative;
+    left: 15px;
+    font-size: 80%;
+    color: red;
+  }
+
+/*=========End of all errors styling ======*/
+
+.user-form-page-body {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px 60px 40px 60px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.user-form-page-title-text{
+  font-family: 'Signika', sans-serif;
+  font-weight: 600;
+}
+
+.form-input-area{
+  background: #F0F0F0;
+  border-radius: 10px;
+  padding: 20px 20px;
+  box-shadow: 2px 5px 10px #e4e4e4;
+}
+
+.custom-form-label{
+  color: gray;
+  padding-left: 12px;
+  padding-bottom: 2px;
+  font-size: 90%;
+  font-weight: 600
+}
+
+.input-field{
+  background: lightsteelblue;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+}
+
+.user_profile_form .form-group{
+  padding-bottom: 30px;
+}
+
+.user_signup_profile_form .form-group{
+  padding-bottom: 20px;
+}
+
+.forget-password-label{
+  float: right;
+  color: #087ee1;
+  font-weight: 600;
+  margin-right: 10px;
+  font-size: 90%;
+  cursor: pointer;
+}
+
+.password_field{
+  position: relative;
+}
+
+.password_field .fa-eye{
+  font-size: 20px;
+  position: absolute;
+  left: 83%;
+  top: 39px;
+  cursor: pointer;
+}
+
+.password_field .fa-eye-slash{
+  color: grey;
+  font-size: 20px;
+  position: absolute;
+  left: 83%;
+  top: 39px;
+  cursor: pointer;
+}
+
+.remember-checkbox{
+  margin-left: 13px;
+  font-size: 90%;
+  color: grey;
+  font-weight: 600;
+}
+
+.btn-custom{
+  width: 100%;
+  height: 50px;
+  box-shadow: 2px 5px 10px #e4e4e4;
+  border-radius: 20px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #6610F2;
+  color: white;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  letter-spacing: 0.15em;
+}
+
+.btn-custom:hover{
+  transform: translate(2px, -2px);
+  letter-spacing: 0.4em;
+  border-radius: 0px;
+  color: white;
+}
+
+.btn-icon{
+  height: 20px;
+  width: 20px;
+  filter: invert(1);
+}
+
+.action_info_message{
+  font-size: 70%;
+  padding: 0px;
+  margin-left: 15px;
+}
+
+@media only screen and (max-width: 540px){
+  .user-form-page-body {
+    width: 90%;
+    padding: 10px 20px 30px 20px !important;
+  }
+}

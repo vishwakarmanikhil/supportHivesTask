@@ -1,0 +1,351 @@
+<!-- to insert the form data into database unomment the below line and rename file name .html to .php -->
+<!-- <?php include_once 'form/register_config.php'; ?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Register Page</title>
+
+	<!-- vendors css files -->
+	<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendors/owlcarousel/owl.carousel.min.css">
+
+	<!-- Custom css files -->
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<body class="register-page-body">
+
+	<!-- navbar section -->
+	<header>
+		<nav class="navbar">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+			    	<img src="assets/images/logo.svg">
+			    </a>
+				<div class="right-nav-menu">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item d-none d-md-block">
+							<a class="nav-link" href="#"><img src="assets/images/icons/bulk-card.svg"> Bulk Buy Gift Cards</a>
+						</li>
+						<li class="nav-item d-none d-md-block">
+							<a class="nav-link" href="#"><img src="assets/images/icons/coin.svg"> Sell Gift Cards</a>
+						</li>
+						<li class="nav-item d-none d-md-block">
+							<a class="nav-link" href="#"><img src="assets/images/icons/user.svg"> Account</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><img src="assets/images/icons/humberg-menu.svg"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- register user form area --> 
+	<section class="register-form-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<!-- to see the error rename the file name as .html to .php and uncomment the below area -->
+					<!-- <?php if (count($errors)>0):?>
+	                    <div class="alert alert-danger db-error-area">
+	                        <?php foreach($errors as $error): ?>
+	                        <li><?php echo $error; ?></li>
+	                        <?php endforeach; ?>            
+	                    </div>
+	                <?php endif; ?> -->
+					<form class="user_register_form" method="post" id="register_form">
+						<p class="form-title">Create an Account</p>
+						<div class="form-group">
+							<div class="form-item account_type_area">
+								<label class="form-label">Choose Type of account*</label><br>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="account_type" id="inlineRadio1" value="buyers-account">
+									<label class="form-check-label" for="inlineRadio1">Buyers Account</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="account_type" id="inlineRadio2" value="sellers-account">
+									<label class="form-check-label" for="inlineRadio2">Sellers Account</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<div class="form-item">
+										<label class="form-label">First Name*</label>
+										<input type="text" class="form-control" name="user_first_name">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<div class="form-item">
+										<label class="form-label">Last Name*</label>
+										<input type="text" class="form-control" name="user_last_name">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-item">
+								<label class="form-label">Email*</label>
+								<input type="email" class="form-control" name="user_email">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-item">
+								<label class="form-label">Phone Number*</label>
+								<div class="row">
+									<div class="col-4">
+										<select class="form-select" name="phone_country_code">
+										  <option value="91" selected>IND +91</option>
+										  <option value="44">UK +44	</option>
+										  <option value="62">AUS +62</option>
+										  <option value="12">AF +12</option>
+										  <option value="12">AF +12</option>
+										</select>
+									</div>
+									<div class="col-8">
+										<input type="text" class="form-control" name="user_phone_number">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-item">
+								<label class="form-label">Mobile Number*</label>
+								<div class="row">
+									<div class="col-4">
+										<select class="form-select" name="mobile_country_code">
+										  <option value="91" selected>IND +91</option>
+										  <option value="44">UK +44	</option>
+										  <option value="62">AUS +62</option>
+										  <option value="12">AF +12</option>
+										  <option value="12">AF +12</option>
+										</select>
+									</div>
+									<div class="col-8">
+										<input type="text" class="form-control" name="user_mobile_number">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-item">
+								<label class="form-label">Date of Birth*</label>
+								<div class="row">
+									<div class="col-4">
+										<select class="form-select" name="birth_date">
+											<option value="" selected disabled>Day</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+									<div class="col-4">
+										<select class="form-select" name="birth_month">
+											<option value="" selected disabled>Month</option>
+											<option value="jan">Jan</option>
+											<option value="feb">Feb</option>
+											<option value="march">March</option>
+										</select>
+									</div>
+									<div class="col-4">
+										<select class="form-select" name="birth_year">
+											<option value="" selected disabled>Year</option>
+											<option value="1999">1999</option>
+											<option value="2000">2000</option>
+											<option value="2001">2001</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-item">
+								<label class="form-label">Password*</label>
+								<input type="Password" class="form-control" name="user_password" id="inputPassword">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-item">
+								<label class="form-label">Confirm Password*</label>
+								<input type="Password" class="form-control" name="user_confirm_password">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-item">
+								<label class="form-label">Company Name</label>
+								<input type="text" class="form-control" name="user_company_name">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-item">
+								<label class="form-label">Company Number</label>
+								<input type="text" class="form-control" name="user_company_number">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-label">Address*</label>
+							<p>If no company provided, please enter residential address.</p>
+							<div class="form-group">
+								<div class="form-item">
+									<label class="form-label-small">Address Line 1</label>
+									<input type="text" class="form-control" name="user_address_line_one">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="form-item">
+									<label class="form-label-small">Address Line 2</label>
+									<input type="text" class="form-control" name="user_address_line_two">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-label-small">City</label>
+							<input type="text" class="form-control" name="user_city">
+						</div>
+						<div class="form-group">
+							<label class="form-label-small">State/Province</label>
+							<input type="text" class="form-control" name="user_state">
+						</div>
+						<div class="form-group">
+							<label class="form-label-small">Postcode/Zipcode</label>
+							<input type="text" class="form-control" name="user_zipcode">
+						</div>
+						<div class="form-group">
+							<label class="form-label-small">Country</label>
+							<select class="form-select" name="user_country">
+								<option value="india" selected>INDIA</option>
+								<option value="america">AMERICA</option>
+								<option value="africa">AFRICA</option>
+								<option value="srilanka">SRI LANKA</option>
+								<option value="germany">GERMANY</option>
+							</select>
+						</div>
+						<div class="form-group text-center">
+							<div class="form-item accept_terms_conditions_area">
+								<label class="form-label">Do you Accept our <a href="#"><u>Terms and Conditions</u></a> ?</label>
+								<div class="form-check">							  
+								  <label class="form-check-label" for="flexRadioDefault2">
+								    I accept<input class="form-check-input" type="radio" name="accept_terms_conditions">
+								  </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-item captcha-form-item">
+								<div class="captch-area" style="display: block !important;">
+									<div class="form-check">							  
+									  <label class="form-check-label captcha-label">
+									    I'm not robot<input class="form-check-input" name="accept_captcha" type="checkbox" value="">
+									  </label>
+									</div>
+									<img src="assets/images/captcha.png" class="captch_img">
+								</div>		
+							</div>					
+						</div>
+						<div class="form-group text-center">
+							<button type="submit" class="btn btn-register" name="register_user" id="register_btn">Create Your Account</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-lg-6 d-none d-lg-block">
+					<div class="form-right-side text-center">
+						<img src="assets/images/regitser-side.png" class="form-right-side-img">
+						<div class="form-right-side-text-area">
+							<p>Do you have <br> account with us ?</p>
+							<button class="btn btn-login">Login</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- background image design cliparts -->
+	<section class="register-form-background-design d-none d-lg-block">
+		<img src="assets/images/icons/ellipse3.svg" class="ellipse3">
+		<img src="assets/images/icons/ellipse4.svg" class="ellipse4">
+		<img src="assets/images/icons/ellipse5.svg" class="ellipse5">
+		<img src="assets/images/icons/clipart6.svg" class="clipart6">
+		<img src="assets/images/icons/clipart7.svg" class="clipart7">
+	</section>
+	
+	<!-- footer section -->
+	<footer class="sticky-bottom register-page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-12">
+				 	<div class="row">
+				 		<div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+				 			<h4>Quick Links</h4>
+				 			<ul>
+				 				<li>Buy Gift Cards</li>
+				 				<li>How to Buy</li>
+				 				<li>Sell Gift Cards</li>
+				 				<li>About us</li>
+				 				<li>FAQ</li>
+				 				<li>Contact</li>
+				 			</ul>
+				 		</div>
+				 		<div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+				 			<h4>Services</h4>
+				 			<ul>
+				 				<li>Register to buy</li>
+				 				<li>Register to Sell</li>
+				 				<li>Login</li>
+				 			</ul>
+				 		</div>
+				 		<div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+				 			<h4>Useful links</h4>
+				 			<ul>
+				 				<li>Terms & Coniditions</li>
+				 				<li>Privacy Policy</li>
+				 				<li>Cookies Policy</li>
+				 			</ul>
+				 		</div>
+				 		<div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+				 			<h4>Contact</h4>
+				 			<ul>
+				 				<li>+44 (0) 207 738 7788</li>
+				 				<li>Email Support</li>
+				 			</ul>
+				 			<p>Backoffice Consulting LTD, <span>20 Molesworth Street, Dublin, Ireland</span></p>
+				 		</div>
+				 	</div>
+				</div>
+				<div class="col-lg-4 col-md-12 text-center">
+					<div class="footer-social-area">
+						<img src="assets/images/icons/facebook.svg">
+						<img src="assets/images/icons/twitter.svg">
+						<img src="assets/images/icons/instagram.svg">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row Copyright-div text-center">
+				<p>Copyright © 2021 Your Gift Card Warehouse</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- vendors js files -->
+	<script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/vendors/jquery/propper.js"></script>
+	<script type="text/javascript" src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/vendors/owlcarousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="assets/vendors/jquery/jquery.validate.js"></script>
+
+	<!-- custom js files -->
+	<script type="text/javascript" src="assets/js/main.js"></script>
+	<script type="text/javascript" src="assets/js/validation.js"></script>
+
+</body>
+</html>
